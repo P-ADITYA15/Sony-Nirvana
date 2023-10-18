@@ -2,8 +2,10 @@ const music = document.getElementById("control");
 const pl = document.getElementById("play");
 const random = document.getElementById("random")
 let track = Math.floor(Math.random() * 10) +1;
+music.src = `./music/${track}.mp3`;
+
 function play(){
-    music.src = `./music/${track}.mp3`;
+    
     music.play();
     pl.setAttribute("class","fa fa-pause");
     pl.setAttribute("onclick","pause()");
