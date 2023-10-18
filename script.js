@@ -19,6 +19,9 @@ function pause(){
 
 function next(){
     track = (track+1)%11;
+    if(track==0){
+        track=1
+    }
     music.src = `./music/${track}.mp3`;
     music.play()
     rand()
